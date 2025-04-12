@@ -5,14 +5,14 @@ import MiniSearch from "minisearch";
 import { useMemo, useState } from "react";
 import { HighlightedText } from "./HighlightedText";
 
-const BINRAN_DOCS_PATH = "/index-20250412.json";
+const BINRAN_DOCS_PATH = "./index-20250412.json";
 
 export default function App() {
   const { data: miniSearch, isLoading } = useQuery({
     queryKey: ["binran"],
     queryFn: async () => {
       const docs: BinaranDocs = await fetch(BINRAN_DOCS_PATH).then((res) =>
-        res.json(),
+        res.json()
       );
       const miniSearch = new MiniSearch({
         fields: ["content"],
