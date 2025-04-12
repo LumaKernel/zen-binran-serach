@@ -1,0 +1,4 @@
+Write deno script to recursively get pages under https://sites.google.com/zen.ac.jp/zen-gakuseibinran/home (just in same domain) and collect text contents (and if possible, collect images aside). You can also use external tools like wget.
+
+Ok, now I don't need images. And please update top level folder name to google_site_scrape/texts to just text-{date}/ (1 depth).
+As new feature, please also output index-{date}-{hash}.json for collection of info about pages got in following format: Array<{ url, content }> ; content is the full copy of the text content you already got.
